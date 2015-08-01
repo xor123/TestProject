@@ -1,5 +1,7 @@
 package com.dvs.testproject;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
@@ -30,6 +32,18 @@ public class MainActivity extends ActionBarActivity {
 
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
+            AlertDialog.Builder builder = new AlertDialog.Builder(this);
+            builder.setTitle("Привет");
+            builder.setPositiveButton("Да", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+
+                        }
+                    }
+
+            );
+            builder.create().show();
+
             return true;
         }
 
